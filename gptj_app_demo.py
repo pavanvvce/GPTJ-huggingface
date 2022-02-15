@@ -7,15 +7,17 @@ print("Dependencies imported")
 
 
 # configurations for GPT-J
-'''
+
 if torch.cuda.is_available():
-    model =  GPTJForCausalLM.from_pretrained("EleutherAI/gpt-j-6B", torch_dtype=torch.float16).cuda()
+    print("cuda")
+    #model =  GPTJForCausalLM.from_pretrained("EleutherAI/gpt-j-6B", torch_dtype=torch.float16).cuda()
 else:
-    model =  GPTJForCausalLM.from_pretrained("EleutherAI/gpt-j-6B", torch_dtype=torch.float16)
+    print("not cuda")
+    #model =  GPTJForCausalLM.from_pretrained("EleutherAI/gpt-j-6B", torch_dtype=torch.float16)
 
 
-torch.save(model,"/home/pavan/gptjnew/gpt-j-6B.pt")
-'''
+#torch.save(model,"/home/pavan/gptjnew/gpt-j-6B.pt")
+
 model = torch.load("/home/pavan/gptjnew/gpt-j-6B.pt")
 print("Model loaded")
 
