@@ -12,6 +12,10 @@ if torch.cuda.is_available():
     model =  GPTJForCausalLM.from_pretrained("EleutherAI/gpt-j-6B", torch_dtype=torch.float16).cuda()
 else:
     model =  GPTJForCausalLM.from_pretrained("EleutherAI/gpt-j-6B", torch_dtype=torch.float16)
+
+
+torch.save(model, "gpt-j-6B.pt")
+
 print("Model loaded")
 
 from transformers import AutoTokenizer
