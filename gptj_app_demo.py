@@ -60,6 +60,7 @@ def index():
 @app.route('/get_end_predictions', methods=['post'])
 def get_prediction_eos():
     try:
+        print("Enter1");
         input_text = request.json['input_text']
      
     
@@ -103,14 +104,15 @@ def get_prediction_eos():
                 #     responseArray.append(word.strip())
                 # res={"prediction":list(set(responseArray))}
         elif(option == "gptj"):
+            print("Enter2");
             #pass
             ##gptj comment
             #res=[]
             elStartTime = time.time()
             resList = []
             inputs = tokenizer(input_text, return_tensors="pt")
-            input_ids = tokenizer(input_text, return_tensors="pt").input_ids.to("cuda")
-            
+            #input_ids = tokenizer(input_text, return_tensors="pt").input_ids.to("cuda")
+            input_ids = tokenizer(input_text, return_tensors="pt").input_ids
             
             out_desiredLength = input_ids.size(dim=1) + top_k
             masks=inputs["attention_mask"].to("cuda")
@@ -216,11 +218,11 @@ def get_prediction_eos():
 
                 # tokenizing the input
                 inputs = tokenizer(fCodes, return_tensors="pt")
-                input_ids = tokenizer(fCodes, return_tensors="pt").input_ids.to("cuda")
-
+                #input_ids = tokenizer(fCodes, return_tensors="pt").input_ids.to("cuda")
+                input_ids = tokenizer(fCodes, return_tensors="pt").input_ids
                 out_desiredLength = input_ids.size(dim=1) + 20
-                masks=inputs["attention_mask"].to("cuda")
-
+                #masks=inputs["attention_mask"].to("cuda")
+                masks=inputs["attention_mask"]
                 # calling the model for element name
                 output = model.generate(
                         input_ids,
@@ -259,9 +261,10 @@ def get_prediction_eos():
                 fCodes += f"\ncomment: {input_text.strip('//')}\ncode: "
 
                 inputs = tokenizer(fCodes, return_tensors="pt")
-                input_ids = tokenizer(fCodes, return_tensors="pt").input_ids.to("cuda")
-                masks=inputs["attention_mask"].to("cuda")
-                
+                #input_ids = tokenizer(fCodes, return_tensors="pt").input_ids.to("cuda")
+                input_ids = tokenizer(fCodes, return_tensors="pt").input_ids
+                #masks=inputs["attention_mask"].to("cuda")
+                masks=inputs["attention_mask"]
                 out_desiredLength = input_ids.size(dim=1) + top_k
                 execStartTime = time.time()
                 output = model.generate(
