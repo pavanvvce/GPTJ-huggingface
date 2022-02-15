@@ -1,0 +1,140 @@
+﻿Intended_Element,Comment,Code
+button,find a button using tagname,"driver.findElement(By.tagName(""button""));"
+button,"locate a button having name = ""submit""","driver.findElement(By.name(""submit""));"
+button,"find a button using id = ""btnId""","driver.findElement(By.id(""btnId""));"
+button,find an element having xpath = /html/body/div[1]/div/div[1]/button,"driver.findElement(By.xpath(""/html/body/div[1]/div/div[1]/button""));"
+button,"find a button using class name=""btnCls""","driver.findElement(By.className(""btnCls""));"
+button,"find an element with cssSelector = ""._6ltg > button""","driver.findElement(By.cssSelector(""._6ltg > button""));"
+button,Locate a button using tagname and store it in a variable,"driver.findElement(By.tagName(""button""));"
+button,"Locate a button with name = ""sbmtBtn""  and store it in a variable","WebElement btnElem = driver.findElement(By.tagName(""button""));"
+button,"Locate a button having id = ""inBtnId""  and assign it to a variable = ""sbmtBtn""","WebElement sbmtBtn = driver.findElement(By.id(""inBtnId""));"
+button,"find a button using xpath = ""//button[text()[contains(.,'GO')]]""  and assign it to a variable","WebElement btnElem = driver.findElement(By.xpath(""//button[text()[contains(.,'GO')]]""));"
+button,Locate a button,"driver.findElement(By.tagName(""button""));"
+button,"find a button with class name = ""btnCls""  and assign it to a variable = ""myBtn""","WebElement myBtn = driver.findElement(By.className(""btnCls""));"
+button,find a button using cssSelector  and store in a variable,"WebElement btnElem = driver.findElement(By.cssSelector(""button""));"
+button,"find a button using tagname and store in a variable = ""btnVar"" and click on it","WebElement btnVar = driver.findElement(By.tagName(""button""));
+btnVar.click();"
+button,"Press the button with id = ""btnId""","driver.findElement(By.id(""btnId"")).click();"
+button,Search for a button using name  and store in a variable and click on it,"WebElement myBtn = driver.findElement(By.name(""submtBtn""));
+myBtn.click();"
+button,find a button using id  and store in a variable and click on it,"WebElement myBtnWId = driver.findElement(By.id(""submtBtnId""));
+myBtnWId.click();"
+button,"find a button using xpath=""//button""  and store in a variable with name =""myBtn"" and click on it","WebElement myBtn = driver.findElement(By.xpath(""//button""));
+myBtn.click();"
+button,"locate a button using class name  and store in a variable having name = ""btnElem"" and click on it","WebElement btnElem = driver.findElement(By.className(""sbmtCls""));
+btnElem.click();"
+button,find a button using cssSelector and store in a variable and click on it,"buttonWebElement btnElem = driver.findElement(By.cssSelector(""button""));
+btnElem.click();"
+button,find a button using tagname and click on it,"driver.findElement(By.tagName(""button"")).click();"
+button,"find a button with name = ""sbmtBtn"" and click on it","driver.findElement(By.name(""sbmtBtn"")).click();"
+button,find a button using id  and click on it,"driver.findElement(By.id(""btnId"")).click();"
+button,locate a button using xpath  and click on it,"driver.findElement(By.xpath(""//button"")).click();"
+button,find a button using class name  and click on it,"driver.findElement(By.className(""btnCls"")).click();"
+button,find a button using cssSelector  and click on it,"driver.findElement(By.cssSelector(""button.btnCls"")).click();"
+button,"Click on a button with value = ""Click here""","driver.findElement(By.xpath(""//button[@value='Click here']"")).click();"
+input text,Find a text input using tag name,"driver.findElement(By.tagName(""input""));"
+input text,"find  an input with id = ""inId""","driver.findElement(By.id(""inId""));"
+input text,"Locate an input text having class name = ""inCls""","driver.findElement(By.className(""inCls""));"
+input text,Search for an element having xpath = //input[@type='text'],"driver.findElement(By.xpath(""//input[@type='text']""));"
+input text,Find an input text using cssSelector = input#id1,"driver.findElement(By.cssSelector(""input#id1""));"
+input text,Find a text input using tag name and clear its existing contents,"driver.findElement(By.tagName(""input"")).clear();"
+input text,"find  an input with id = ""inId"" and click on it","driver.findElement(By.id(""inId"")).click();"
+input text,"Locate an input text having class name = ""inCls"" clear its contents","driver.findElement(By.className(""inCls"")).clear();"
+input text,"Search for an input having xpath = //input[@type='text'] and set its value to ""xyz""","driver.findElement(By.xpath(""//input[@type='text']"")).sendKeys(""xyz"");"
+input text,Find an input text using cssSelector = input.inCls and store it in a variable,"WebElement inElem = driver.findElement(By.cssSelector(""input.inCls""));"
+input text,"Find a text input using tag name and store it in a variable and populate it with text ""hello""","WebElement inElem = driver.findElement(By.tagName(""input""));
+inElem.sendKeys(""hello"");"
+input text,"find  an input with id = ""email "" and store it in a variable and clear its contents","WebElement inElem = driver.findElement(By.id(""email""));
+inElem.clear();"
+input text,"Locate an input text with class name = ""pswdCls"" and click on it","driver.findElement(By.className(""pswdCls"")).click();"
+input text,"Find an element with xpath = /html/body/div[1]/div/div[1]/input and store it in a variable and set it to ""test""","WebElement inElem = driver.findElement(By.xpath(""/html/body/div[1]/div/div[1]/input""));
+inElem.sendKeys(""test"");"
+anchor,Find a hyperlink with tagname,"driver.findElement(By.tagName(""a""));"
+anchor,"Find a link with text = ""Button""","driver.findElement(By.linkText(""a""));"
+anchor,"Locate a link with partial link text as ""www.microsoft.com""","driver.findElement(By.partialLinkText(""www.microsoft.com""));"
+anchor,"Search for a link with id=""myLink""","driver.findElement(By.id(""myLink""));"
+anchor,"Locate an element with xpath = ""/html/body/div[1]/header/div[1]/div/nav/ul/li[2]/a""","driver.findElement(By.xpath(""/html/body/div[1]/header/div[1]/div/nav/ul/li[2]/a""));"
+anchor,Loacte a link with tagname and store it in a variable,"WebElement linkElem = driver.findElement(By.tagName(""a""));"
+anchor,"Go to the link with partial text = ""catalog""","driver.findElement(By.partialLinkText(""catalog""))"
+anchor,"Find a link with link text = ""Click here"" and click on it","driver.findElement(By.linkText(""Click here"")).click();"
+anchor,"Search for a link with partial link text as ""www.facebook.com"" and store it in a variable and click on it","WebElement aElem = driver.findElement(By.partialLinkText(""www.facebook.com""));
+aElem.click();"
+anchor,"Search for a link with id=""myLink"" and store it in a variable","WebElement inElem = driver.findElement(By.id(""myLink""));"
+anchor,"Locate an element with xpath = ""/html/body/div[1]/nav/div[1]/div/a"" and click on it","driver.findElement(By.xpath(""/html/body/div[1]/nav/div[1]/div/a"")).click();"
+anchor,"Search for an element with cssSelector = ""#breadcrumb > a.el_package"" and store it in a variable","WebElement aElem = driver.findElement(By.cssSelector(""#breadcrumb > a.el_package""));"
+anchor,"Click on the link with text = ""Products""","driver.findElement(By.linkText(""Products""));"
+anchor,"Locate a link with class name = ""lCls"" ","driver.findElement(By.className(""lCls""));"
+input text,Find an input text element,"driver.findElement(By.cssSelector(""input(type='text')"");"
+Web Driver,Create a web driver,"System.setProperty(""webdriver.chrome.driver"",""<pathToDriver>"");
+WebDriver driver = new ChromeDriver();"
+Web Driver,Create and object of a WebDriver,WebDriver driver = new FirefoxDriver();
+Web Driver,Create a WebDriver for Chrome,"System.setProperty(""webdriver.chrome.driver"",""<pathToDriver>"");
+WebDriver driver = new ChromeDriver();"
+Web Driver,Create a firefox web driver,"System.setProperty(""webdriver.gecko.driver"",""Path_of_Firefox_Driver""); 
+WebDriver driver = new FirefoxDriver();"
+Web Driver,Create an object of Chrome Driver,WebDriver driver = new ChromeDriver();
+Web Driver,WebDriver for IE,"System.setProperty(""webdriver.ie.driver"", ""<path to IE driver>""); 
+WebDriver driver=new InternetExplorerDriver();"
+Web Driver,Chrome Web Driver,"System.setProperty(""webdriver.chrome.driver"",""<pathToDriver>"");
+WebDriver driver = new ChromeDriver();"
+Web Driver,Set path of chrome driver,"System.setProperty(""webdriver.chrome.driver"",""<pathToDriver>"");"
+Web Driver,Set path for driver,"System.setProperty(""webdriver.gecko.driver"",""Path_of_Firefox_Driver""); "
+Web Driver,Set path for firefox driver,"System.setProperty(""webdriver.gecko.driver"",""Path_of_Firefox_Driver""); "
+Web Driver,Close the window,driver.close();
+Web Driver,Close the browser,driver.close();
+Web Driver,Quit the browser,driver.quit();
+Web Driver,Close the driver,driver.quit();
+Web Driver,Quit the driver,driver.quit();
+Web Driver,Close all windows,driver.quit();
+Web Driver,Close all tabs,driver.close();
+Web Driver,Navigate to a page,driver.navigate().to(URL);
+Web Driver,Go to the URL,"driver.get(""https://www.facebook.com/"");"
+Web Driver,Go to the specified URL,driver.get(url);
+Web Driver,Open the page,driver.get(url);
+Web Driver,Open the link,"driver.navigate().to(""www.google.com"");"
+Web Driver,Navigate to the specified link,driver.navigate().to(URL);
+Web Driver,Close current window,driver.close();
+Web Driver,Close driver session,driver.quit();
+select,create a Select object with element located using name = 'orderBy' and select the option with visible text 'Price: high to low',"new Select(driver.findElement(By.name(""orderBy""))).selectByVisibleText(""Price: high to low"");"
+select,"locate a Dropdown having id ""countryId"" and select the option with given visible text ","new Select(driver.findElement(By.id(""countryId""))).selectByVisibleText(""Korea, Democratic People's Republic of"");"
+select,Find a Select element using name = 'orderBy' and select the option with value = 2,"new Select(driver.findElement(By.name(""orderBy""))).selectByValue(""2"");"
+select,Find a dropdown with xpath and select the option at index 2,"new Select(driver.findElement(By.xpath(""(//select[@id='prodQuantityId'])[2]""))).selectByIndex(2);"
+select,"Find a Select element with id ""project"" and select the option with index ""1""","new Select(driver.findElement(By.id(""project""))).selectByIndex(1);"
+select,find a dropdown using tagname,"new Select(driver.findElement(By.tagName(""select"")));"
+select,"locate a dropdown having name = ""submit""","new Select(driver.findElement(By.name(""submit"")));"
+select,"find a dropdown using id = ""selectId""","new Select(driver.findElement(By.id(""selectId"")));"
+select,find an element having xpath = /html/body/div[1]/div/form/select,"new Select(driver.findElement(By.xpath(""/html/body/div[1]/div/form/select"")));"
+select,"find a dropdown using class name=""dayCls""","new Select(driver.findElement(By.className(""dayCls"")));"
+select,"find an element with cssSelector = ""._6ltg > select""","new Select(driver.findElement(By.cssSelector(""._6ltg > select"")));"
+select,Locate a dropdown using tagname and store it in a variable,"Select dropDown = new Select(driver.findElement(By.tagName(""select"")));"
+select,"Locate a drop down with name = ""months"" and check if it is multi-option select","Select monthSelect = new Select(driver.findElement(By.name(""months"")));
+Boolean isMultiOption = monthSelect.isMultiple();"
+select,"Locate a drop down having id = ""year""  and assign it to a variable = ""yearSel""","Select yearSel = new Select(driver.findElement(By.id(""year"")));"
+select,"find a drop down using xpath = ""//select[@name='extension']""  and assign it to a variable","Select dropDown = new Select(driver.findElement(By.xpath(""//select[@name='extension']"")));"
+select,Locate a drop down,"new Select(driver.findElement(By.tagName(""select"")));"
+select,"find a drop down with class name = ""extension""  and assign it to a variable = ""extSel""","Select extSel = new Select(driver.findElement(By.className(""extension"")));"
+select,"find a drop down using cssSelector and store in a variable and select the option with visible text = ""March""","Select dropDown = new Select(driver.findElement(By.cssSelector(""select#months"")));
+dropDown.selectByVisibleText(""March"");"
+select,"find a drop down using tagname and store in a variable = ""countries"" and get all the options","Select countries = new Select(driver.findElement(By.tagName(""select"")));
+List<WebElement> countrieList = countries.getOptions();"
+select,"Press the drop down with id = ""btnId"" and check if allows to select multiple values","new Select(driver.findElement(By.id(""btnId""))).isMultiple();"
+select,Search for a drop down using name and store in a variable ,"Select dropDown = new Select(driver.findElement(By.name(""mySelection"")));"
+select,find a select using id and store in a variable and select the option at index '2',"Select dropDown = new Select(driver.findElement(By.id(""selectId"")));
+dropDown.selectByIndex(2);"
+select,"find a select using xpath=""//select"" and set it to the option with value = ""Orange""","new Select(driver.findElement(By.xpath(""//select""))).selectByValue(""Orange"");"
+select,"locate a select using class name and store in a variable having name = ""carsSelection"" and all the options","Select carsSelection = new Select(driver.findElement(By.className(""carsSelect"")));
+List<WebElement> cars = carsSelection.getOptions();"
+select,find a select using cssSelector and check if it allows multiple selection,"new Select(driver.findElement(By.cssSelector(""select.statesSel""))).isMultiple();"
+select,"find a select using tagname and select the option with value = ""1""","new Select(driver.findElement(By.tagName(""select""))).selectByValue(""1"");"
+select,"find a select with name =""fruits"" and check if it is multi-option select","Select fruitsSelection = new Select(driver.findElement(By.name(""fruits"")));
+Boolean isMulti = fruitsSelection.isMultiple();"
+select,"find a select using id and set its value to the option with text = ""Grapes""","new Select(driver.findElement(By.id(""selId""))).selectByVisibleText(""Grapes"");"
+select,"locate a select using xpath and deselct the option with value =""1""","new Select(driver.findElement(By.xpath(""//select""))).deselectByValue(""1"");"
+select,find a select using class name deselct the option at index = 0,"new Select(driver.findElement(By.className(""selCls""))).deselectByIndex(0);"
+select,find a select using cssSelector deselct all the options,"new Select(driver.findElement(By.cssSelector(""select""))).deselectAll();"
+input text,"Search for an input with placeholder = ""Email""","driver.findElement(By.xpath(""//input[@placeholder='Email']""));"
+Web Driver,Create chrome web driver,"System.setProperty(""webdriver.chrome.driver"",""<pathToDriver>"");
+WebDriver driver = new ChromeDriver();"
+Web Driver,Create an object of a WebDriver,WebDriver driver = new FirefoxDriver();
+Web Driver,Create a Web driver for Chrome,"System.setProperty(""webdriver.chrome.driver"",""<pathToDriver>"");
+WebDriver driver = new ChromeDriver();"

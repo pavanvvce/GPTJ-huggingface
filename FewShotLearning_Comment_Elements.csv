@@ -1,0 +1,121 @@
+Comment,Intended_Element
+find a button using tagname,button
+"locate a button having name = ""submit""",button
+"find a button using id = ""btnId""",button
+find an element having xpath = /html/body/div[1]/div/div[1]/button,button
+"find a button using class name=""btnCls""",button
+"find an element with cssSelector = ""._6ltg > button""",button
+Locate a button using tagname and store it in a variable,button
+"Locate a button with name = ""sbmtBtn""  and store it in a variable",button
+"Locate a button having id = ""inBtnId""  and assign it to a variable = ""sbmtBtn""",button
+"find a button using xpath = ""//button[text()[contains(.,'GO')]]""  and assign it to a variable",button
+Locate a button,button
+"find a button with class name = ""btnCls""  and assign it to a variable = ""myBtn""",button
+find a button using cssSelector  and store in a variable,button
+"find a button using tagname and store in a variable = ""btnVar"" and click on it",button
+"Press the button with id = ""btnId""",button
+Search for a button using name  and store in a variable and click on it,button
+find a button using id  and store in a variable and click on it,button
+"find a button using xpath=""//button""  and store in a variable with name =""myBtn"" and click on it",button
+"locate a button using class name  and store in a variable having name = ""btnElem"" and click on it",button
+find a button using cssSelector and store in a variable and click on it,button
+find a button using tagname and click on it,button
+"find a button with name = ""sbmtBtn"" and click on it",button
+find a button using id  and click on it,button
+locate a button using xpath  and click on it,button
+find a button using class name  and click on it,button
+find a button using cssSelector  and click on it,button
+"Click on a button with value = ""Click here""",button
+Find a text input using tag name,input text
+"find  an input with id = ""inId""",input text
+"Locate an input text having class name = ""inCls""",input text
+Search for an element having xpath = //input[@type='text'],input text
+Find an input text using cssSelector = input#id1,input text
+Find a text input using tag name and clear its existing contents,input text
+"find  an input with id = ""inId"" and click on it",input text
+"Locate an input text having class name = ""inCls"" clear its contents",input text
+"Search for an input having xpath = //input[@type='text'] and set its value to ""xyz""",input text
+Find an input text using cssSelector = input.inCls and store it in a variable,input text
+"Find a text input using tag name and store it in a variable and populate it with text ""hello""",input text
+"find  an input with id = ""email "" and store it in a variable and clear its contents",input text
+"Locate an input text with class name = ""pswdCls"" and click on it",input text
+"Find an element with xpath = /html/body/div[1]/div/div[1]/input and store it in a variable and set it to ""test""",input text
+Find a hyperlink with tagname,anchor
+"Find a link with text = ""Button""",anchor
+"Locate a link with partial link text as ""www.microsoft.com""",anchor
+"Search for a link with id=""myLink""",anchor
+"Locate an element with xpath = ""/html/body/div[1]/header/div[1]/div/nav/ul/li[2]/a""",anchor
+Loacte a link with tagname and store it in a variable,anchor
+"Go to the link with partial text = ""catalog""",anchor
+"Find a link with link text = ""Click here"" and click on it",anchor
+"Search for a link with partial link text as ""www.facebook.com"" and store it in a variable and click on it",anchor
+"Search for a link with id=""myLink"" and store it in a variable",anchor
+"Locate an element with xpath = ""/html/body/div[1]/nav/div[1]/div/a"" and click on it",anchor
+"Search for an element with cssSelector = ""#breadcrumb > a.el_package"" and store it in a variable",anchor
+"Click on the link with text = ""Products""",anchor
+"Locate a link with class name = ""lCls"" ",anchor
+Find an input text element,input text
+Create a web driver,Web Driver
+Create and object of a WebDriver,Web Driver
+Create a WebDriver for Chrome,Web Driver
+Create a firefox web driver,Web Driver
+Create an object of Chrome Driver,Web Driver
+WebDriver for IE,Web Driver
+Chrome Web Driver,Web Driver
+Set path of chrome driver,Web Driver
+Set path for driver,Web Driver
+Set path for firefox driver,Web Driver
+Close the window,Web Driver
+Close the browser,Web Driver
+Quit the browser,Web Driver
+Close the driver,Web Driver
+Quit the driver,Web Driver
+Close all windows,Web Driver
+Close all tabs,Web Driver
+Navigate to a page,Web Driver
+Go to the URL,Web Driver
+Go to the specified URL,Web Driver
+Open the page,Web Driver
+Open the link,Web Driver
+Navigate to the specified link,Web Driver
+Close current window,Web Driver
+Close driver session,Web Driver
+create a Select object with element located using name = 'orderBy' and select the option with visible text 'Price: high to low',select
+"locate a Dropdown having id ""countryId"" and select the option with given visible text ",select
+Find a Select element using name = 'orderBy' and select the option with value = 2,select
+Find a dropdown with xpath and select the option at index 2,select
+"Find a Select element with id ""project"" and select the option with index ""1""",select
+find a dropdown using tagname,select
+"locate a dropdown having name = ""submit""",select
+"find a dropdown using id = ""selectId""",select
+find an element having xpath = /html/body/div[1]/div/form/select,select
+"find a dropdown using class name=""dayCls""",select
+"find an element with cssSelector = ""._6ltg > select""",select
+Locate a dropdown using tagname and store it in a variable,select
+"Locate a drop down with name = ""months"" and check if it is multi-option select",select
+"Locate a drop down having id = ""year""  and assign it to a variable = ""yearSel""",select
+"find a drop down using xpath = ""//select[@name='extension']""  and assign it to a variable",select
+Locate a drop down,select
+"find a drop down with class name = ""extension""  and assign it to a variable = ""extSel""",select
+"find a drop down using cssSelector and store in a variable and select the option with visible text = ""March""",select
+"find a drop down using tagname and store in a variable = ""countries"" and get all the options",select
+"Press the drop down with id = ""btnId"" and check if allows to select multiple values",select
+Search for a drop down using name and store in a variable ,select
+find a select using id and store in a variable and select the option at index '2',select
+"find a select using xpath=""//select"" and set it to the option with value = ""Orange""",select
+"locate a select using class name and store in a variable having name = ""carsSelection"" and all the options",select
+find a select using cssSelector and check if it allows multiple selection,select
+"find a select using tagname and select the option with value = ""1""",select
+"find a select with name =""fruits"" and check if it is multi-option select",select
+"find a select using id and set its value to the option with text = ""Grapes""",select
+"locate a select using xpath and deselct the option with value =""1""",select
+find a select using class name deselct the option at index = 0,select
+find a select using cssSelector deselct all the options,select
+"Search for an input with placeholder = ""Email""",input text
+"Search for an input with placeholder = ""Email"" and click on it",input text
+"Search for an input with placeholder = ""last name"" and clear its contents",input text
+"Search for an input with placeholder = ""name"" and populate it with text ""Priyanka""",input text
+Create Web Driver,Web Driver
+create a web driver,Web Driver
+create a web driver for chrome browser,Web Driver
+create web driver for firefox,Web Driver
