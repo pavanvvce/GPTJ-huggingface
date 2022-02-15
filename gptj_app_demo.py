@@ -29,7 +29,7 @@ import json
 #import main
 import requests
 import os
-import gpt_util
+#import gpt_util
 import time
 from flask_cors import CORS
 import pandas as pd
