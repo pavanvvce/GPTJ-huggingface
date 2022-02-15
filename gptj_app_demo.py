@@ -115,8 +115,8 @@ def get_prediction_eos():
             input_ids = tokenizer(input_text, return_tensors="pt").input_ids
             
             out_desiredLength = input_ids.size(dim=1) + top_k
-            masks=inputs["attention_mask"].to("cuda")
-
+            #masks=inputs["attention_mask"].to("cuda")
+            masks=inputs["attention_mask"]
             # single word/line generator
             if assistance == "content_assist":
                 print("Content assist:\n")
