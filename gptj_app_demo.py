@@ -7,7 +7,7 @@ print("Dependencies imported")
 
 
 # configurations for GPT-J
-
+'''
 if torch.cuda.is_available():
     model =  GPTJForCausalLM.from_pretrained("EleutherAI/gpt-j-6B", torch_dtype=torch.float16).cuda()
 else:
@@ -15,7 +15,8 @@ else:
 
 
 torch.save(model,"/home/pavan/gptjnew/gpt-j-6B.pt")
-#model = torch.load("gpt-j-6B.pt")
+'''
+model = torch.load("/home/pavan/gptjnew/gpt-j-6B.pt")
 print("Model loaded")
 
 from transformers import AutoTokenizer
@@ -25,7 +26,7 @@ model.eval()
 
 from flask import Flask, request, render_template
 import json
-import main
+#import main
 import requests
 import os
 import gpt_util
