@@ -10,13 +10,13 @@ print("Dependencies imported")
 
 if torch.cuda.is_available():
     print("cuda")
-    model =  GPTJForCausalLM.from_pretrained("EleutherAI/gpt-j-6B").cuda()
+    #model =  GPTJForCausalLM.from_pretrained("EleutherAI/gpt-j-6B").cuda()
 else:
     print("not cuda")
-    model =  GPTJForCausalLM.from_pretrained("EleutherAI/gpt-j-6B")
+    #model =  GPTJForCausalLM.from_pretrained("EleutherAI/gpt-j-6B")
 
 
-torch.save(model,"/home/pavan/gptjnew/gpt-j-6B.pt")
+#torch.save(model,"/home/pavan/gptjnew/gpt-j-6B.pt")
 
 model = torch.load("/home/pavan/gptjnew/gpt-j-6B.pt")
 print("Model loaded")
@@ -31,7 +31,7 @@ import json
 #import main
 import requests
 import os
-#import gpt_util
+import gpt_util
 import time
 from flask_cors import CORS
 import pandas as pd
