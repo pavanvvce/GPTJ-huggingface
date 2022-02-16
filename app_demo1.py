@@ -104,7 +104,7 @@ def get_prediction_eos():
 
             inputs = tokenizer(input_text, return_tensors="pt")
             #input_ids = tokenizer(input_text, return_tensors="pt").input_ids.to("cuda")
-            input_ids = tokenizer(input_text, return_tensors="pt")
+            input_ids = tokenizer(input_text, return_tensors="pt").input_ids
             out_desiredLength = input_ids.size(dim=1) + top_k
             #masks=inputs["attention_mask"].to("cuda")
             masks=inputs["attention_mask"]
