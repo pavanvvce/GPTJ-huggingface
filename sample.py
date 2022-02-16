@@ -18,7 +18,7 @@ tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-j-6B")
 model.eval()
 
 input_text = "Hello my name is Blake and"
-input_ids = tokenizer.encode(str(input_text), return_tensors='pt').cuda()
+input_ids = tokenizer.encode(str(input_text), return_tensors='pt')
 
 output = model.generate(
     input_ids,
