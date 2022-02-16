@@ -9,11 +9,17 @@ tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-j-6B")
 print("Loaded tokenizer")
 
 # load the model from local(Model has been previously downloaded)
-model = torch.load("gptj_float16.pt")
+if torch.cuda.is_available():
+    print("cuda")
+    #model =  GPTJForCausalLM.from_pretrained("EleutherAI/gpt-j-6B").cuda()
+else:
+    print("not cuda")
+    #model =  GPTJForCausalLM.from_pretrained("EleutherAI/gpt-j-6B")
+    
+model = torch.load("/home/pavan/gptjnew/gpt-j-6B.pt")
 print("Model loaded")
 
-model.parallelize()
-print("Model parallelized")
+model.eval()
 
 
 from flask import Flask, request, render_template
@@ -97,11 +103,11 @@ def get_prediction_eos():
             resList = []
 
             inputs = tokenizer(input_text, return_tensors="pt")
-            input_ids = tokenizer(input_text, return_tensors="pt").input_ids.to("cuda")
-            
+            #input_ids = tokenizer(input_text, return_tensors="pt").input_ids.to("cuda")
+            input_ids = tokenizer(input_text, return_tensors="pt")
             out_desiredLength = input_ids.size(dim=1) + top_k
-            masks=inputs["attention_mask"].to("cuda")
-
+            #masks=inputs["attention_mask"].to("cuda")
+            masks=inputs["attention_mask"]
             # block with the logic to generate code for code completion
             if assistance == "content_assist":
                 print("Content assist:\n")
@@ -208,7 +214,7 @@ def get_prediction_eos():
 
                 # seraching for the element in the data that we have
                 extractedData = codesCollection.loc[codesCollection['Intended_Element'] == elementToSearch]
-
+                '''
                 # using the fuzz to find the most relevant comments
                 comments = extractedData.iloc[:, 1].astype(str)
                 matchingCodes = process.extract(
@@ -219,7 +225,7 @@ def get_prediction_eos():
                 )
                 filteredComments = list(x[0] for x in matchingCodes)
                 extractedData = codesCollection[codesCollection["Comment"].isin(filteredComments)]
-                
+                '''
                 # extracting only Codes and comments
                 extractedData = extractedData.iloc[:,[1,2]]
                 
@@ -235,10 +241,13 @@ def get_prediction_eos():
                 extraTokens = 50
 
                 inputs = tokenizer(fCodes, return_tensors="pt")
-                input_ids = tokenizer(fCodes, return_tensors="pt").input_ids.to("cuda")
-                masks=inputs["attention_mask"].to("cuda")
+                #input_ids = tokenizer(fCodes, return_tensors="pt").input_ids.to("cuda")
+                input_ids = tokenizer(fCodes, return_tensors="pt").input_ids
+                #masks=inputs["attention_mask"].to("cuda")
+                masks=inputs["attention_mask"]
                 
                 out_desiredLength = input_ids.size(dim=1) + extraTokens
+                print("out_desiredLength:",out_desiredLength) 
                 execStartTime = time.time()
                 try:
                     output = model.generate(
