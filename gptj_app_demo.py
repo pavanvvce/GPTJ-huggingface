@@ -10,13 +10,13 @@ print("Dependencies imported")
 
 if torch.cuda.is_available():
     print("cuda")
-    #model =  GPTJForCausalLM.from_pretrained("EleutherAI/gpt-j-6B", torch_dtype=torch.float16).cuda()
+    model =  GPTJForCausalLM.from_pretrained("EleutherAI/gpt-j-6B").cuda()
 else:
     print("not cuda")
-    #model =  GPTJForCausalLM.from_pretrained("EleutherAI/gpt-j-6B", torch_dtype=torch.float16)
+    model =  GPTJForCausalLM.from_pretrained("EleutherAI/gpt-j-6B")
 
 
-#torch.save(model,"/home/pavan/gptjnew/gpt-j-6B.pt")
+torch.save(model,"/home/pavan/gptjnew/gpt-j-6B.pt")
 
 model = torch.load("/home/pavan/gptjnew/gpt-j-6B.pt")
 print("Model loaded")
